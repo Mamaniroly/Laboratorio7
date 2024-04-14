@@ -1,18 +1,16 @@
-import { useState } from "react";
+import { useState } from "react"
 
-export const Button = () => {
-    //const{ text } = props; 
-    const[count, setCount] = useState(0);
-
-    function handlerButton(){
-        setCount(count + 5);
-    }
-
-    return(
-        
-        <button onClick={handlerButton}>
-            { count }
-        </button>
-
-    );
-}
+    export function Button() {
+        const mostrarValorAleatorio = () => {
+          const valorAleatorio = Math.floor(Math.random() * 100) + 1;
+          alert("El valor aleatorio es: " + valorAleatorio);
+        };
+      
+        return (
+          <div>
+            <h1>Generador de Valor Aleatorio</h1>
+            <button onClick={mostrarValorAleatorio}>Mostrar Valor Aleatorio</button>
+          </div>
+        );
+      }
+//}
